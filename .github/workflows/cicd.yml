@@ -3,11 +3,11 @@ name: React Vite CI/CD
 on:
   push:
     branches:
-      - feature      # 👈 runs CI tests on the test branch
-      - main         # 👈 deploys when merged into main
+      - feature    # Run CI tests on feature branch
+      - main       # Deploy when merged into main
   pull_request:
     branches:
-      - main         # 👈 runs checks before merging to main
+      - main       # Run checks before merging to main
 
 permissions:
   contents: write
@@ -40,13 +40,20 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' # 👈 only runs on main
+    if: github.ref == 'refs/heads/main'  # Only deploy on main branch
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: vite-build
+          path: dist/
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./dist
