@@ -1,0 +1,132 @@
+:root {
+    --primary: rgb(12, 12, 69);
+    --secondary: #d3d3d3;
+    --light:#b5b5b5;
+}
+
+.about {
+  padding: 3rem 1rem;
+  background-color: #f9fafc;
+  font-family: "Poppins", sans-serif;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+.about .intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* ✅ Impact Section */
+.impact-section {
+  background: #fff;
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.impact-section h2 {
+    color: var(--primary);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-item {
+  background: #f0f4ff;
+  padding: 1.2rem;
+  border-radius: 10px;
+}
+
+.stat-item h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+}
+
+.stat-item p {
+  font-weight: 500;
+  color: #555;
+}
+
+.mission-section,
+.how-it-works,
+.values {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.mission-section h2,
+.how-it-works h2,
+.values h2,
+.cta-section h2 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+
+.how-it-works ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.how-it-works li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.value-item {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.value-item h3 {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+.cta-section {
+  background: var(--primary);
+  color: white;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+
+.cta-section button {
+  margin-top: 1rem;
+  background: white;
+  color: var(--primary);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta-section button:hover {
+  background: #f1f1f1;
+}
